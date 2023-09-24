@@ -88,6 +88,10 @@ def relu_back(x: float, d: float) -> float:
         return 0
 
 
+def sigmoid_back(x: float, d: float) -> float:
+    exp_x = math.exp(-x)
+    return d * exp_x / ((1 + exp_x) ** 2)
+
 # ## Task 0.3
 
 # Small practice library of elementary higher-order functions.
